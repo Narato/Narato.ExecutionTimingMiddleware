@@ -1,0 +1,32 @@
+﻿{
+  "version": "1.0.1-*",
+  "title": "Narato.ExecutionTimingMiddleware",
+  "description": "Contains middleware for timing requests",
+  "authors": [ "Narato - http://www.narato.be" ],
+  "language": "en-us",
+
+  "dependencies": {
+    "Microsoft.NETCore.App": {
+      "version": "1.0.0",
+      "type": "platform"
+    },
+    "Microsoft.AspNetCore.Mvc": "1.0.0",
+    "NETStandard.Library": "1.6.0",
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ]
+    }
+  },
+
+  "packOptions": {
+    "owners": [ "Narato" ],
+    "iconUrl": "http://narato.be/wp-content/uploads/2016/11/narato-icon-logo-64x64-transparant.png",
+    "tags": [ "Narato", "timing", "Middleware" ]
+  }
+}
