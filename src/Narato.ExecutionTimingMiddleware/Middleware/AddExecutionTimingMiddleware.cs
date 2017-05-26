@@ -23,7 +23,11 @@ namespace Narato.ExecutionTimingMiddleware.Middleware
             context.Response.OnStarting(() =>
             {
                 sw.Stop();
-                context.Response.Headers.Add(EXECUTION_TIMING_HEADER_NAME, sw.ElapsedMilliseconds.ToString());
+                // this can sometimes happen when for example you use the default ExceptionHandlerMiddleware
+                if (!context.Response.Headers.ContainsKey(EXECUTION_TIMING_HEADER_NAME))
+                {
+                    context.Response.Headers.Add(EXECUTION_TIMING_HEADER_NAME, sw.ElapsedMilliseconds.ToString());
+                }
                 return Task.CompletedTask;
             });
 
