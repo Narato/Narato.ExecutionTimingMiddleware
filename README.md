@@ -5,16 +5,10 @@ It will time the request processing time in an unintrusive way. It will add a re
 
 Getting started
 ==========
-### 1. Add dependency in project.json
+### 1. Add dependency in your project's csproj file
 
-```json
-"dependencies": {
-   "Narato.ExecutionTimingMiddleware": "1.0.1"
-}
-```
-or if using the new csproj files: 
 ```xml
-<PackageReference Include="Narato.ExecutionTimingMiddleware" Version="1.0.1" />
+<PackageReference Include="Narato.ExecutionTimingMiddleware" Version="2.0.0" />
 ```
 
 ### 2. Configure Startup.cs
